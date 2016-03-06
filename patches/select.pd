@@ -1,4 +1,4 @@
-#N canvas 430 143 840 602 10;
+#N canvas 424 153 840 602 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array out 100 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -47,7 +47,6 @@
 #X obj 116 182 select base wharf inner outer;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
-#X connect 4 0 1 0;
 #X connect 4 0 5 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
@@ -71,6 +70,7 @@
 #X connect 29 0 4 0;
 #X connect 29 1 30 0;
 #X connect 30 0 5 1;
+#X connect 30 0 1 0;
 #X connect 31 0 4 0;
 #X connect 31 1 30 0;
 #X connect 32 0 4 0;

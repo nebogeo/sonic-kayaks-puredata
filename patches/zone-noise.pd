@@ -1,4 +1,4 @@
-#N canvas 0 54 1366 714 10;
+#N canvas 0 82 1351 686 10;
 #X obj 12 668 outlet~;
 #X obj 11 23 inlet;
 #X obj 67 610 *~;
@@ -53,9 +53,9 @@
 -1 -1;
 #X obj 510 450 mod 16;
 #X obj 508 476 tabread4 nzband;
-#X obj 575 611 / 127;
+#X obj 615 618 / 127;
 #X obj 496 593 *~;
-#X floatatom 575 590 5 0 0 0 - - -, f 5;
+#X floatatom 615 597 5 0 0 0 - - -, f 5;
 #X obj 191 643 delwrite~ nzdelarr 3000;
 #X obj 495 569 delread~ nzdelarr 500;
 #X obj 507 499 + 1;
@@ -119,15 +119,17 @@
 #X obj 331 385 * 6;
 #X obj 368 386 * 10;
 #X obj 411 309 loadbang;
-#X msg 640 598 50;
+#X msg 680 605 50;
 #X msg 285 528 280;
 #X obj 658 536 delay 1000;
 #X msg 448 382 199;
+#X obj 450 620 delread~ nzdelarr 400;
+#X obj 93 630 *~;
 #X connect 1 0 4 0;
 #X connect 1 0 6 0;
 #X connect 2 0 0 0;
-#X connect 2 0 13 0;
 #X connect 3 0 2 1;
+#X connect 3 0 76 1;
 #X connect 4 0 3 0;
 #X connect 6 0 9 0;
 #X connect 6 1 5 0;
@@ -211,3 +213,5 @@
 #X connect 72 0 16 0;
 #X connect 73 0 71 0;
 #X connect 74 0 19 0;
+#X connect 75 0 76 0;
+#X connect 76 0 13 0;
