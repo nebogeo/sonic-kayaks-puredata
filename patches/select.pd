@@ -1,4 +1,4 @@
-#N canvas 424 153 840 602 10;
+#N canvas 421 158 840 602 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array out 100 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -6,22 +6,22 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
 #X coords 0 1 99 -1 200 140 1;
-#X restore 508 239 graph;
-#X obj 453 442 tabwrite~ out;
-#X obj 490 396 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 438 15 graph;
+#X obj 450 363 tabwrite~ out;
+#X obj 449 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 452 418 metro 250;
-#X obj 244 354 +~;
-#X obj 249 416 dac~;
-#X text 90 44 entered zone;
-#X text 448 44 left zone;
-#X text 70 271 zone subpatches;
+#X obj 449 339 metro 250;
+#X obj 303 346 +~;
+#X obj 302 394 dac~;
+#X text 128 151 entered zone;
+#X text 391 159 left zone;
+#X text 88 269 zone subpatches;
 #X text 8 7 sonic kayak zone mixer;
 #X msg 223 68 port 8888;
 #X obj 222 88 udpreceive 8888;
 #X obj 222 108 unpackOSC;
 #X obj 220 129 route /entered-zone /left-zone;
-#X msg 126 205 1;
+#X msg 129 206 1;
 #X msg 172 206 1;
 #X msg 207 208 1;
 #X msg 322 210 0;
@@ -29,15 +29,15 @@
 #X msg 403 208 0;
 #X obj 219 151 unpack s;
 #X obj 322 152 unpack s;
-#X obj 25 318 loadbang;
+#X obj 27 320 loadbang;
 #X msg 27 344 1;
-#X obj 119 346 delay 5000;
-#X msg 77 345 0;
-#X obj 27 368 startup;
+#X obj 85 337 delay 5000;
+#X msg 85 359 0;
+#X obj 27 376 startup;
 #X msg 30 108 \; pd dsp 1;
 #X obj 31 82 loadbang;
 #X obj 196 269 zone-water;
-#X obj 273 355 +~;
+#X obj 323 346 +~;
 #X obj 271 268 zone-quipu;
 #X obj 339 267 zone-noise;
 #X obj 408 268 zone-claudius;
@@ -45,6 +45,9 @@
 #X msg 441 206 0;
 #X obj 323 181 select base wharf inner outer;
 #X obj 116 182 select base wharf inner outer;
+#X text 0 219 for manual testing;
+#X text 1 205 use these buttons ->;
+#X text 26 400 startup sound;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X connect 4 0 5 0;
@@ -66,6 +69,8 @@
 #X connect 23 0 26 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 0;
+#X connect 26 0 5 0;
+#X connect 26 0 5 1;
 #X connect 28 0 27 0;
 #X connect 29 0 4 0;
 #X connect 29 1 30 0;
